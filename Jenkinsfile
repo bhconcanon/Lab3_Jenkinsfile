@@ -1,9 +1,9 @@
+@Library('startendtime') _
 pipeline {
   agent any
     libraries {
         lib('startendtime')
     }
-    @Library('startendtime') _
     tools{
         maven 'maven 3'
     }
