@@ -42,7 +42,7 @@ pipeline {
             }
         stage('StartEndTime') {
             steps {
-                build(println "End time: " + new Date(((long)build.getStartTimeInMillis() + build.duration)))
+                buildTime()
             }
         }
     }
