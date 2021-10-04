@@ -1,5 +1,8 @@
 pipeline {
   agent any
+    libraries {
+        lib('startendtime')
+    }
     tools{
         maven 'maven 3'
     }
@@ -36,9 +39,6 @@ pipeline {
                 to: 'bilal.hussain@concanon.com'
                 )
             }
-        libraries {
-            lib('startendtime')
-        }
         stage('StartEndTime') {
             steps {
                 build '*'
