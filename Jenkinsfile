@@ -3,6 +3,7 @@ pipeline {
     libraries {
         lib('startendtime')
     }
+    @Library('startendtime') _
     tools{
         maven 'maven 3'
     }
@@ -40,10 +41,9 @@ pipeline {
                     )
                 }
             }
-        @Library('startendtime')_
         stage('StartEndTime') {
             steps {
-                buildTime
+                buildTime()
             }
         }
     }
