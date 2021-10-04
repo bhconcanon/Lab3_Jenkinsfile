@@ -1,6 +1,8 @@
 pipeline {
   agent any
-    @Library('startendtime')_
+    libraries {
+        lib('startendtime')
+    }
     tools{
         maven 'maven 3'
     }
@@ -38,9 +40,10 @@ pipeline {
                     )
                 }
             }
+        @Library('startendtime')_
         stage('StartEndTime') {
             steps {
-                buildTime()
+                buildTime
             }
         }
     }
