@@ -42,7 +42,7 @@ pipeline {
             }
         stage('StartEndTime') {
             steps {
-                build(build.running duration())
+                build(build.getTimestampString2())
             }
         }
     }
