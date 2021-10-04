@@ -42,6 +42,8 @@ pipeline {
         stage('StartEndTime') {
             steps {
                 build '*'
+                }
+            }
         }
     }
 }  
