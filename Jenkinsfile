@@ -43,7 +43,7 @@ pipeline {
             }
         stage('StartEndTime') {
             steps {
-                buildTime '*'
+                buildTime('*')
             }
         }
     }
