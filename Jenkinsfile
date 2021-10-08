@@ -41,12 +41,12 @@ spec:
                 sh './scripts/deliver.sh'
                 }
         }
-    }
         stage ('End Time') {
             steps {
                 buildEnd ()
             }
         }
+    }
         post {
             success {
                 emailext (
