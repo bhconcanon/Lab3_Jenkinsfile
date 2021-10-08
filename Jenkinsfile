@@ -15,10 +15,6 @@ spec:
     '''
         defaultContainer 'build'
   }
-}
-    tools{
-        maven 'maven 3'
-    }
     stages {
         stage ('Start Time') {
             steps {
@@ -46,6 +42,11 @@ spec:
                 }
         }
     }
+        stage ('End Time') {
+            steps {
+                buildEnd ()
+            }
+        }
         post {
             success {
                 emailext (
