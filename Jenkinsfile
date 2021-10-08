@@ -20,15 +20,16 @@ spec:
         maven 'maven 3'
     }
     stages {
-        stage ('Start Time')
+        stage ('Start Time') {
             steps {
                 buildStart ()
             }
+        }
         stage ('build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
-    }
+        }
         stage('Test') {
             steps {
                 sh 'mvn test'
